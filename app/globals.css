@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Ombre design tokens — stored as space-separated RGB so Tailwind's
+     `/opacity` modifiers (e.g. bg-accent/10, border-line/60) work correctly. */
+  --color-bg: 11 11 10; /* #0B0B0A */
+  --color-bg-secondary: 17 17 16; /* #111110 */
+  --color-surface: 23 23 22; /* #171716 */
+  --color-surface-elevated: 29 29 27; /* #1D1D1B */
+  --color-text-primary: 243 240 232; /* #F3F0E8 */
+  --color-text-secondary: 167 163 154; /* #A7A39A */
+  --color-text-muted: 112 109 102; /* #706D66 */
+  --color-border: 41 41 37; /* #292925 */
+  --color-accent: 200 169 107; /* #C8A96B */
+  --color-accent-highlight: 224 197 138; /* #E0C58A */
+  --color-success: 143 175 138; /* #8FAF8A */
+  --color-warning: 201 168 106; /* #C9A86A */
+  --color-error: 199 124 115; /* #C77C73 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text-primary));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: rgb(var(--color-accent) / 0.35);
+  color: rgb(var(--color-text-primary));
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--color-accent));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
