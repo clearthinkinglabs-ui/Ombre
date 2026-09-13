@@ -27,6 +27,9 @@ const config: Config = {
           DEFAULT: "rgb(var(--color-accent) / <alpha-value>)",
           highlight: "rgb(var(--color-accent-highlight) / <alpha-value>)",
         },
+        violet: "rgb(var(--color-violet) / <alpha-value>)",
+        sand: "rgb(var(--color-warm-sand) / <alpha-value>)",
+        rose: "rgb(var(--color-rose-quartz) / <alpha-value>)",
         state: {
           success: "rgb(var(--color-success) / <alpha-value>)",
           warning: "rgb(var(--color-warning) / <alpha-value>)",
@@ -45,7 +48,7 @@ const config: Config = {
         xl: "1.75rem",
       },
       boxShadow: {
-        glow: "0 0 120px -20px rgb(var(--color-accent) / 0.35)",
+        glow: "0 0 120px -20px rgb(var(--color-accent-highlight) / 0.35)",
       },
       maxWidth: {
         content: "72rem",

@@ -38,7 +38,7 @@ export function ConversationList({
                 className={cn(
                   "w-full cursor-pointer truncate rounded-md px-3 py-2 text-left text-sm transition-colors duration-200",
                   active
-                    ? "bg-surface-elevated text-ink"
+                    ? "bg-surface-elevated text-accent-highlight"
                     : "text-ink-secondary hover:bg-surface hover:text-ink"
                 )}
               >

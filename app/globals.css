@@ -3,21 +3,60 @@
 @tailwind utilities;
 
 :root {
-  /* Ombre design tokens — stored as space-separated RGB so Tailwind's
-     `/opacity` modifiers (e.g. bg-accent/10, border-line/60) work correctly. */
-  --color-bg: 11 11 10; /* #0B0B0A */
-  --color-bg-secondary: 17 17 16; /* #111110 */
-  --color-surface: 23 23 22; /* #171716 */
-  --color-surface-elevated: 29 29 27; /* #1D1D1B */
-  --color-text-primary: 243 240 232; /* #F3F0E8 */
-  --color-text-secondary: 167 163 154; /* #A7A39A */
-  --color-text-muted: 112 109 102; /* #706D66 */
-  --color-border: 41 41 37; /* #292925 */
-  --color-accent: 200 169 107; /* #C8A96B */
-  --color-accent-highlight: 224 197 138; /* #E0C58A */
-  --color-success: 143 175 138; /* #8FAF8A */
-  --color-warning: 201 168 106; /* #C9A86A */
-  --color-error: 199 124 115; /* #C77C73 */
+  /* ============================================================
+     RAW OMBRE COLOR TOKENS — the canonical, locked palette.
+     Stored as space-separated RGB so Tailwind's `/opacity` modifiers
+     (e.g. bg-accent/10, border-line/60) work correctly.
+     ============================================================ */
+  --ombre-noir: 8 11 16;              /* #080B10 — deepest foundation */
+  --ombre-midnight: 14 23 36;         /* #0E1724 — main background */
+  --ombre-deep-ocean: 16 43 58;       /* #102B3A — secondary surface */
+  --ombre-deep-teal: 18 63 67;        /* #123F43 — structural accent */
+  --ombre-peacock: 31 111 120;        /* #1F6F78 — brand accent */
+  --ombre-misty-aqua: 143 216 210;    /* #8FD8D2 — living highlight */
+  --ombre-obsidian-violet: 24 18 43;  /* #18122B — secondary atmospheric depth, used sparingly */
+  --ombre-moonlight: 232 240 236;     /* #E8F0EC — primary text */
+  --ombre-warm-sand: 205 170 115;     /* #CDAA73 — rare premium accent */
+  --ombre-rose-quartz: 226 186 168;   /* #E2BAA8 — rare warm accent */
+
+  /* Derived, same-family text/border tones — desaturated Moonlight/
+     Deep Ocean blends rather than an unrelated grey. */
+  --ombre-text-secondary: 159 181 175;
+  --ombre-text-muted: 98 118 111;
+  --ombre-structural-border: 26 51 61;
+
+  /* Functional semantic states — deliberately independent of the rare
+     accents, since Warm Sand/Rose Quartz must never stand in for
+     success/warning/error. */
+  --ombre-state-success: 111 175 142;
+  --ombre-state-warning: 209 154 84;
+  --ombre-state-error: 217 116 104;
+
+  /* ============================================================
+     SEMANTIC ROLE TOKENS — what components actually consume, so a
+     role's meaning can change later without hunting through files.
+     ============================================================ */
+  --color-bg: var(--ombre-midnight);
+  --color-bg-secondary: var(--ombre-noir);
+  --color-surface: var(--ombre-deep-ocean);
+  --color-surface-elevated: var(--ombre-deep-teal);
+
+  --color-text-primary: var(--ombre-moonlight);
+  --color-text-secondary: var(--ombre-text-secondary);
+  --color-text-muted: var(--ombre-text-muted);
+
+  --color-border: var(--ombre-structural-border);
+
+  --color-accent: var(--ombre-peacock);
+  --color-accent-highlight: var(--ombre-misty-aqua);
+
+  --color-violet: var(--ombre-obsidian-violet);
+  --color-warm-sand: var(--ombre-warm-sand);
+  --color-rose-quartz: var(--ombre-rose-quartz);
+
+  --color-success: var(--ombre-state-success);
+  --color-warning: var(--ombre-state-warning);
+  --color-error: var(--ombre-state-error);
 }
 
 html {

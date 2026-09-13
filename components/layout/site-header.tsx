@@ -42,7 +42,7 @@ export function SiteHeader() {
                   aria-current={active ? "page" : undefined}
                   className={cn(
                     "text-sm transition-colors duration-200 hover:text-ink",
-                    active ? "text-ink" : "text-ink-secondary"
+                    active ? "text-accent-highlight" : "text-ink-secondary"
                   )}
                 >
                   {link.label}

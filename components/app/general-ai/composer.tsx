@@ -75,7 +75,7 @@ export function Composer({
             disabled={!value.trim()}
             whileTap={{ scale: 0.95 }}
             aria-label="Send message"
-            className="inline-flex h-9 w-9 flex-shrink-0 cursor-pointer items-center justify-center rounded-md bg-accent text-background transition-opacity duration-200 disabled:cursor-not-allowed disabled:opacity-40"
+            className="inline-flex h-9 w-9 flex-shrink-0 cursor-pointer items-center justify-center rounded-md bg-accent text-ink transition-opacity duration-200 disabled:cursor-not-allowed disabled:opacity-40"
           >
             <ArrowUp className="h-4 w-4" aria-hidden />
           </motion.button>

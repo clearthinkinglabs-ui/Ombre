@@ -38,7 +38,7 @@ function NavList({
               className={cn(
                 "flex items-center gap-3 rounded-md px-3 py-2.5 text-sm transition-colors duration-200",
                 active
-                  ? "bg-surface-elevated text-ink"
+                  ? "bg-surface-elevated text-accent-highlight"
                   : "text-ink-secondary hover:bg-surface hover:text-ink"
               )}
             >
