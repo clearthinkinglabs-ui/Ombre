@@ -39,7 +39,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="mt-6">
-            <Button href="/app/general-ai" showArrow>
+            <Button href="/app/general" showArrow>
               Start a conversation
             </Button>
           </div>

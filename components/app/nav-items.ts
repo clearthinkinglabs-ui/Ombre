@@ -9,7 +9,7 @@ export interface AppNavItem {
 
 export const PRIMARY_NAV: AppNavItem[] = [
   { href: "/app/home", label: "Home", icon: Home },
-  { href: "/app/general-ai", label: "General AI", icon: Sparkles },
+  { href: "/app/general", label: "General AI", icon: Sparkles },
   { href: "/app/mentors", label: "Mentors", icon: Users },
   { href: "/app/projects", label: "Projects", icon: FolderKanban },
   { href: "/app/library", label: "Library", icon: Library },
