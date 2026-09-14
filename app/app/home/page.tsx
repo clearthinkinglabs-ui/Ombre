@@ -5,7 +5,7 @@ import { GlassPanel } from "@/components/ui/glass-panel";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { MentorCard } from "@/components/sections/mentors/mentor-card";
-import { MENTOR_PREVIEWS } from "@/lib/mentors-data";
+import { getFeaturedMentors } from "@/lib/mentors-data";
 import { Sparkles, Users, FolderKanban } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const featuredMentors = MENTOR_PREVIEWS.slice(0, 3);
+  const featuredMentors = getFeaturedMentors();
 
   return (
     <Container className="py-10 sm:py-14">
@@ -97,7 +97,11 @@ export default function HomePage() {
         />
         <div className="grid gap-4 sm:grid-cols-3">
           {featuredMentors.map((mentor) => (
-            <MentorCard key={mentor.name} mentor={mentor} />
+            <MentorCard
+              key={mentor.id}
+              mentor={mentor}
+              href={`/app/mentors/${mentor.categoryId}/${mentor.id}`}
+            />
           ))}
         </div>
         <div className="mt-6">

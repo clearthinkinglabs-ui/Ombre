@@ -5,7 +5,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { Button } from "@/components/ui/button";
 import { RevealGroup, RevealItem } from "@/components/ui/reveal";
 import { MentorCard } from "@/components/sections/mentors/mentor-card";
-import { MENTOR_PREVIEWS } from "@/lib/mentors-data";
+import { getFeaturedMentors } from "@/lib/mentors-data";
 
 export const metadata: Metadata = {
   title: "Mentors",
@@ -40,8 +40,8 @@ export default function MentorsPreviewPage() {
           />
 
           <RevealGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {MENTOR_PREVIEWS.map((mentor) => (
-              <RevealItem key={mentor.name}>
+            {getFeaturedMentors().map((mentor) => (
+              <RevealItem key={mentor.id}>
                 <MentorCard mentor={mentor} />
               </RevealItem>
             ))}
